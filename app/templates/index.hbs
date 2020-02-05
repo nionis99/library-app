@@ -1,0 +1,25 @@
+<div class="jumbotron text-center">
+  <h1>Add your stupid task</h1>
+
+  <br/>
+
+  <div class="form-horizontal form-group form-group-lg row">
+    <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-1">
+      {{input type="text" value=taskTitle class="form-control" placeholder="title" autofocus="autofocus"}},
+      {{input type="text" value=taskDescription class="form-control" placeholder="description" autofocus="autofocus"}}
+    </div>
+    <div class="col-sm-offset-1 col-md-3 col-md-offset-1">
+      <h3>Name it!</h3>
+      <h3>Describe it!</h3>
+      <h3>Do it!</h3>
+    </div>
+  </div>
+  <div class="col-xs-10 col-xs-offset-0 col-sm-offset-1 col-sm-4 col-md-3 row">
+    <button class="btn btn-primary btn-lg btn-block" {{action 'saveTaskData'}} disabled={{isDisabled}}>Add</button>
+  </div>
+<br/>
+  {{#if responseMessage}}
+    <div class="alert alert-success">{{responseMessage}}</div>
+  {{/if}}
+  <br/><br/>
+</div>
